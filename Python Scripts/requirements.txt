@@ -1,0 +1,6 @@
+pyserial
+matplotlib
+numpy
+
+# Guia de Instalação de depedencias
+# https://youtu.be/KxvKCSwlUv8

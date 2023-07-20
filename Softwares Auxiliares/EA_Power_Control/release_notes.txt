@@ -1,0 +1,209 @@
+-----------------------------------------------------
+----------------- INTERNAL USE ONLY -----------------
+-----------------------------------------------------
+
+EA POWER CONTROL RELEASE NOTES
+
+This document describes the changes between versions of EA Power Control and any known issues.
+
+For the latest news on EA Power Control visit the Elektro-Automatik web site at: http://www.elektroautomatik.de
+
+Version 2.23
+-----------------
+- Scripting in general: now supports up to 5 SCPI commands in one line, separated by semicolons
+- Scripting in Multi Control: option to use the user text of a device in a command line to send that specific command line to one or multiple devices which match the given user text
+- Graph: now supports switching between "Full" and "Compact" view to reserve more space for the plot area
+- Logging: maximum line number per logging file defined to be 65000, after that it would create a new file automatically
+- Sequencing: Fixed an error where sequencing wouldn't work when the interval is set to several hours
+
+Version 2.22
+-----------------
+- Support Semi F47 power derating
+- Support Controller Speed, Operation Counter
+- Start/Stop efficiency calculation with button. Also stop when user defined time is reached
+- Start logging automatically with Function Generator
+- Save/load system profile as (load/save to USB stick) on the HMI
+- Implement precise timer for sequencing, logging and script 
+- Settings are restored automatically when application windows are closed and then re-opened
+- Hide slave device currently in remote control by its master
+- In Settings tab Limits, add a "Reset all" button which reset all limits to their defaults
+
+Version 2.21
+-----------------
+- Support automotive LV123/124/148 in function generator
+- Support customized SAS feature
+- Support HMI 10K internal flash boot loader update 
+- Support new log format for battery test
+- Do not allow 10K KE downgrade from version V3.XX to V2.XX
+- Only allow USB stick HMI update for device with USB slot in the front panel
+
+Version 2.20
+-----------------
+- Support calibration license
+- Support 10K device calibration
+- Support new device driver V2_0_2_4
+- Support 10K device class 75
+- Support new language: Spanish
+- Support different settings for different device in Sequencing/logging
+- Support PSB 10K device calibration in demo mode
+- Support single PDF for every language in all versions (only English for APS)
+- Support power mode for SAS static test
+- Support debugging feature in calibration (show device debugging information)
+- Replace 70% with 75% in UP mode, set Uoc/Isc as preset in EN 50350
+- Implement "Apply" button in UI, ET and UP mode in EN 50350
+- 10K device calibration only works with KE 2.08 or higher
+- Fix the font size error in Chinese PC
+- Enhance demo mode
+
+Version 2.19
+-----------------
+- Support software automatic update
+- Support new language: French
+- Support EN50530 simulation DAY_UP mode
+- Support EN50530 cycle for all DAY modes
+
+Version 2.18
+-----------------
+- Fix calibration data erasing error caused by FW update.
+  EAPC does not restore calibration data after FW update.
+  EAPC only saves a calibration data file for backup.
+- Support calibration data read/write for ELR 10K, ELR 3K, ELM 5K.
+- Implement some new requests from sales Brian
+
+Version 2.17
+-----------------
+- Support constant power charging/discharging for battery dynamic test
+- Support PS 2000 T/S device with TFT display
+- Refresh MPPT curve and point during DIN EN 50530 test
+
+Version 2.16
+-----------------
+- Support device 10k HMI update with USB stick
+- Support FG EN50530 UP mode with user input percentage
+- Support energy and efficiency in EN50530 log file by Brian's request
+- Show total count and current index when uploading/downloading FG EN 50530 day et/ui data
+
+Version 2.15
+-----------------
+- Support calibration feature for PSB 9000 and standard devices
+- Support Anybus CAN FW update
+
+Version 2.14
+-----------------
+- Implement FW update: KE 13 update, HMI update for STM32 controller with command line, DR update for PSB 10K devices
+- Implement Settings and Device State 2 for PSB 10K devices
+- Implement analog Settings pin 9 and 10 for PSB devices
+- Fix the remote status error when connect type and access mode do not match
+- Fix the XY/FC table data error with PSB device
+- Write/Read to/from the second table block when PSB device is with IU sink mode
+
+Version 2.13
+-----------------
+- Implemented Sandia feature in Multi Control
+- Implement additional battery test features (static charge and dynamic test) in Function Generator & Multi Control
+
+Version 2.12
+-----------------
+- Implemented SAS (Solar Array Simulation) feature in Multi Control
+- Implemented Sandia feature in Function Generator
+- Fixed some small bugs
+
+Version 2.11
+-----------------
+- Fixed issue with updates (pop-up regarding registers with 0 value)
+- Added up/down buttons to numeric input boxes, manual increment/decrement with arrow keys on keyboard also possible
+- Added analog interface pin 6, 14, 15 configuration in Settings app (available for PSI 9000, ELR 9000, EL 9000 B series from KE 2.23 for pin 6/14 and KE 2.24 for pin 15)
+- Added negative value input in Multi Control for PSB and PSBE series
+- Added logging feature to Function Generator app
+- Fixed a GUI issue with power actual values higher than 99999W
+- Fixed an issue with the firmware update of Slave model HMIs
+- Added a warning message for COM port number bigger than 255
+- Added a button to reset the Arbitrary generator in Function Generator app
+- New demo mode added: Show all available features, but grey out locked ones in Main window
+
+Version 2.10
+-----------------
+- General improvements in the Function Generator app
+- Added PSB support for Function Generator app
+- Added graph for DIN EN 50530 data (DayUI and DayET)
+- Added PSB demo mode device
+- Added MPPT automatization option to Multi Control app
+- Fixed an issue with the licence management
+- Added new device driver (V2.0.2.0)
+- Added support for new series: PSB 9000 Slave, PSB Slave Front USB, PSB 9000 3W, PSBE 9000
+- Added firmware version to every app window
+- Improved "Script" feature in Terminal and Multi Control
+- Fixed some small bugs
+
+Version 2.09
+-----------------
+- Added "Script" feature to Terminal and Multi Control app
+- Added PSB device support to Terminal, Settings and SeqLog app
+- Modified ethernet communication (disable nagle algorithm)
+- Modified Function Generator PV DIN EN50530, PV table and MPPT tab
+- Added option to switch from decimal to hexadecimal view of the CAN interface IDs
+- Fixed some translation and placement issues
+- Fixed some possible crashes during Demo mode
+- Fixed some small bugs
+
+Version 2.08
+-----------------
+- Fixed an issue with the KE update on Windows 10 systems
+
+Version 2.07
+-----------------
+- Fixed some bugs
+- Added new PV EN 50530 function to Multi Control
+- Added new TFT display support of PS/PSE 9000 devices
+- Added some devices
+
+Version 2.06
+-----------------
+- Graph und Funktionsgenerator zu Multi-Control hinzugefügt
+- Möglichkeit einer 14 Tage Trial Version hinzugefügt (PopUps können nicht mehr dauerhaft weggeklickt werden, Multi-Control mit nur 5 Geräten) -> Lizenstool zur Generierung fehlt noch]
+- Fehler beim Kom. und Performance von Multi Control verbessert
+- DR Update wird auch bei "No DR found" zugelassen
+- Bei DR Update werden Nullwerte bei den Tresholds korrigiert und das Update durchgefügt
+- Teilkomponenten werden beim Update ignoriert, wenn keine passenden Firmwaredateien in der UPD Datei gefunden werden
+- Neue Geräte Klassenerkennung eingefügt (EL3000B, PS3000C, PSB9000; alle ohne FG-Unterstützung in EAPC)
+- Fehlermeldungen während des Updates verbessert (Fehler deutlicher erkennbar)
+- Fehler bei Seq&Log behoben (Seq. lief, aber Kommunikation zum Gerät war tot)
+- Bei Funktionsgenerator PV Tabelle MPP Punkt in Grafik eingefügt, PU Kurve und Effizienz eingefügt ((actual power)/(V_MPP I_MPP*100%))
+- Bei Funktionsgenerator neue PV DIN EN 50530 Funktion hinzugefügt
+- Konfiguration der Anybus-Schnittstellenkonfiguration hinzugefügt
+- Fehler in der Settings App behoben
+- Kleinere Fehler behoben
+
+Version 2.05
+-----------------
+- Improved communication for Multi Control and SeqLog
+- Fixed some bugs with SeqLog with different sequence files
+- Read and write devices settings during KE update
+- Changed update procedure for HMI with external flash
+- Fixed some small bugs
+
+Version 2.04
+-----------------
+- Added MPP Tracking to advanced feature Function Generator
+- Improved DR firmware update to recover calibration data [Only for some devices, definition via UPD firmware file]
+- Fixed some bugs
+
+Version 2.03
+-----------------
+- Added new help file
+- Added advanced features Function Generator and Graph
+- Added DEMO mode
+- Added some FORMAT settings in the configuration tab
+- Fixed some bugs
+
+Version 2.02
+-----------------
+- Added new help file
+- Added logging feature in Multi Control APP
+- Added multi language support
+- Fixed some bugs
+
+Version 2.01 - First final release
+-----------------
+- Added new help file
+- Fixed some small bugs
