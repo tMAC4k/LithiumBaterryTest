@@ -1,5 +1,5 @@
 
-# :wave: The Basics of GitHub 
+# 🔋: Lithium Battery Test
 
 ## 🤓 Course overview and learning outcomes 
 
